@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3">
+<h3> Search Todo </h3>
+  <form>
+  <div class ="form-group">
+    <label> Todo </label>
+    <input type ="text" class ="form-control" id= "id1"name = "id1" #id1 placeholder="Type to search....">
+    <button type ="button" (click)="onSubmit(id1.value)">search</button>
+  </div>
+  </form>
+  <p *ngIf="todo.firstName == null"> No Such Records Found</p>
+  <hr>
+  <h2>Todo</h2>
+  <table class ="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Id</th>
+    </tr>
+    <tr>
+      <td>{{todo.id}}</td>
+      <td>{{todo.firstName}}</td>
+      <td>{{todo.lastName}}</td>
+      <td>{{todo.emailId}}</td>
+    </tr>
+    </thead>
+  </table>
+</div>
