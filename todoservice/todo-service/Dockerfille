@@ -1,0 +1,4 @@
+FROM openjdk:latest
+EXPOSE 8081
+ADD target/todo-service.jar todo-service.jar
+ENTRYPOINT ["sh", "-c", "java -jar /todo-service.jar"]
